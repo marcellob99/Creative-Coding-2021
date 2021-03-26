@@ -1,0 +1,234 @@
+//declaring variables
+let yLoc; 
+let increment;
+let rain;
+let fall;
+
+
+function setup() {
+	createCanvas(1200, 700);
+	background(0, 225, 255);
+  yLoc = 500;
+	rain = 0;
+  increment = 5;
+	fall = 5;
+	frameRate(200);
+}
+
+function draw() {
+	background(86, 58, 140);
+	
+	function mousePressed(){
+	}
+	
+	//moon
+fill(245, 232, 120);
+	ellipse(270, 50, 50, 50);
+fill(86, 58, 140);
+	ellipse(280, 45, 40, 40);
+	
+	
+	//clouds
+	noStroke();
+   fill(50, 50, 50, 50);
+ ellipse(120, 30, 100, 100);
+  ellipse(140, 50, 100, 50);
+  ellipse(160, 50, 100, 70);
+  ellipse(100, 50, 100, 30);
+  ellipse(80, 50, 100, 10);
+	
+ ellipse(320, 80, 100, 100);
+  ellipse(340, 100, 100, 50);
+  ellipse(360, 100, 100, 70);
+  ellipse(300, 100, 100, 30);
+  ellipse(280, 100, 100, 10);
+	
+  ellipse(20, 80, 100, 100);
+  ellipse(40, 100, 100, 50);
+  ellipse(60, 100, 100, 70);
+  ellipse(0, 100, 100, 30);
+	
+	ellipse(620, 60, 100, 100);
+  ellipse(640, 80, 100, 50);
+  ellipse(660, 80, 100, 70);
+  ellipse(600, 80, 100, 30);
+  ellipse(580, 80, 100, 10);
+	
+	ellipse(920, 160, 100, 100);
+  ellipse(940, 180, 100, 50);
+  ellipse(960, 180, 100, 70);
+  ellipse(900, 180, 100, 30);
+  ellipse(880, 180, 100, 10);
+	
+	ellipse(1040, 100, 100, 100);
+  ellipse(1060, 120, 100, 50);
+  ellipse(1080, 120, 100, 70);
+  ellipse(1020, 120, 100, 30);
+  ellipse(1000, 120, 100, 10);
+	
+	ellipse(620, 60, 100, 100);
+  ellipse(640, 80, 100, 50);
+  ellipse(660, 80, 100, 70);
+  ellipse(600, 80, 100, 30);
+  ellipse(580, 80, 100, 10);
+	
+	ellipse(680, 60, 100, 100);
+  ellipse(700, 80, 100, 50);
+  ellipse(720, 80, 100, 70);
+  ellipse(740, 80, 100, 30);
+  ellipse(640, 80, 100, 10);
+	
+	ellipse(140, 200, 100, 100);
+  ellipse(160, 220, 100, 50);
+  ellipse(180, 220, 100, 70);
+  ellipse(120, 220, 100, 30);
+  ellipse(100, 220, 100, 10);
+	
+	ellipse(540, 220, 100, 100);
+  ellipse(560, 240, 100, 50);
+  ellipse(580, 240, 100, 70);
+  ellipse(520, 240, 100, 30);
+  ellipse(500, 240, 100, 10);
+	
+		ellipse(1140, 260, 100, 100);
+  ellipse(1160, 280, 100, 50);
+  ellipse(1180, 280, 100, 70);
+  ellipse(1120, 280, 100, 30);
+  ellipse(1100, 280, 100, 10);
+	
+	//ghosts
+ fill(147, 275, 202, 150); 
+  ellipse(width/2+30, yLoc, 30, 50);
+	ellipse(width/2+10, yLoc - 5, 10, 10);
+	ellipse(width/2+50, yLoc - 5, 10, 10);
+fill(0, 0 ,0)
+	ellipse(width/2+30, yLoc - 7, 10, 5);
+	ellipse(width/2+35, yLoc - 13, 4, 4);
+	ellipse(width/2+25, yLoc - 13, 4, 4);
+	
+fill(39, 245, 156, 150);
+	ellipse(260, yLoc/2 + 100, 30, 50);
+	ellipse(280, yLoc/2 + 95, 10, 10);
+	ellipse(240, yLoc/2 + 95, 10, 10);
+fill(0, 0 ,0)
+	ellipse(260, yLoc/2 + 95, 10, 10);
+	ellipse(265, yLoc/2 + 87, 4, 4);
+	ellipse(255, yLoc/2 + 87, 4, 4);
+	
+	
+  yLoc = yLoc + increment;
+	
+	 if(yLoc >= 700){
+    increment = -1;
+  }
+  if(yLoc <= random(200)){
+    increment = 1;
+  }
+	
+	
+	
+   //hills
+fill(10, 77, 5);
+	ellipse(1000, 780, 1500, 800);
+fill(10, 64, 6);
+	ellipse(50, 600, 1000, 400);
+fill(16, 71, 12);
+	ellipse(600, 700, 1700, 600);
+	
+	//tree
+fill(46, 39, 19);
+	triangle(1000, 470, 1020, 470, 1005, 110);
+	triangle(1006, 255, 900, 200, 1005, 250);
+	triangle(1100, 310, 1005, 325, 1005, 315);
+	
+	// pumpkins
+fill(219, 164, 35);
+	ellipse(1060, 480, 40, 40);
+fill(179, 130, 16);
+	ellipse(1073, 480, 40, 40);
+fill(209, 153, 23);
+	ellipse(1067, 480, 40, 40);
+fill(39, 54, 7);
+	rect(1063, 450, 4, 10);
+	
+fill(219, 164, 35);
+	ellipse(900, 440, 40, 40);
+fill(179, 130, 16);
+	ellipse(913, 440, 40, 40);
+fill(209, 153, 23);
+	ellipse(907, 440, 40, 40);
+fill(39, 54, 7);
+	rect(903, 410, 4, 10);
+	
+	fill(219, 164, 35);
+	ellipse(940, 540, 40, 40);
+fill(179, 130, 16);
+	ellipse(953, 540, 40, 40);
+fill(209, 153, 23);
+	ellipse(947, 540, 40, 40);
+fill(39, 54, 7);
+	rect(943, 510, 4, 10);
+	
+	// more ghosts
+fill(39, 245, 156, 150);
+	ellipse(735, yLoc/2 + 400, 30, 50);
+	ellipse(755, yLoc/2 + 395, 10, 10);
+	ellipse(715, yLoc/2 + 395, 10, 10);
+fill(0, 0 ,0)
+	ellipse(735, yLoc/2 + 395, 10, 15);
+	ellipse(740, yLoc/2 + 384, 4, 4);
+	ellipse(730, yLoc/2 + 384, 4, 4);
+	
+	fill(147, 275, 202, 150); 
+  ellipse(110, yLoc + 200, 30, 50);
+	ellipse(130, yLoc + 195, 10, 10);
+	ellipse(90, yLoc + 195, 10, 10);
+fill(0, 0 ,0)
+	ellipse(110, yLoc + 195, 6, 5);
+	ellipse(115, yLoc + 190, 4, 4);
+	ellipse(105, yLoc + 190, 4, 4);
+	
+	//graves
+fill(102, 111, 117);
+	ellipse(630, 350, 70, 70);
+	rect(595, 350, 70, 70);
+	
+fill(102, 111, 117);
+	ellipse(330, 540, 70, 70);
+	rect(295, 540, 70, 70);
+	
+fill(102, 111, 117);
+	ellipse(835, 500, 70, 70);
+	rect(800, 500, 70, 70);
+	
+fill(102, 111, 117);
+	ellipse(735, 610, 70, 70);
+	rect(700, 610, 70, 70);
+	
+fill(102, 111, 117);
+	ellipse(550, 460, 70, 70);
+	rect(515, 460, 70, 70);
+	
+fill(102, 111, 117);
+	ellipse(110, 590, 70, 70);
+	rect(75, 590, 70, 70);
+	
+fill(102, 111, 117);
+	ellipse(260, 400, 70, 70);
+	rect(225, 400, 70, 70);
+	
+	//rain
+	fill(60, 117, 163, 150); 
+  ellipse(width/2, rain, 5, 10);
+	
+  rain = rain + fall;
+	
+	 if(rain >= 700){
+    fall = 10;
+  }
+  if(rain <= 0){
+    fall = 10;
+  }
+	
+}
+
